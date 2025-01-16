@@ -30,6 +30,10 @@ resource "azurerm_linux_virtual_machine" "main" {
   admin_username        = var.vm_admin_username
   network_interface_ids = [azurerm_network_interface.main.id]
 
+  secure_boot_enabled               = true
+  vtpm_enabled                      = true
+  vm_agent_platform_updates_enabled = true
+
   custom_data = filebase64("${path.module}/user_data/${var.user_data_file}")
 
   identity {

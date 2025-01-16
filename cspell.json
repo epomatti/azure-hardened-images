@@ -10,7 +10,8 @@
         "osdisk",
         "STIG",
         "ubuntulinux",
-        "vnet"
+        "vnet",
+        "vtpm"
     ],
     "ignoreWords": [],
     "import": []
