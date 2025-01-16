@@ -45,3 +45,15 @@ variable "vm_image_sku" {
 variable "vm_image_version" {
   type = string
 }
+
+variable "vm_plan_name" {
+  type = string
+}
+
+variable "vm_plan_publisher" {
+  type = string
+}
+
+variable "vm_plan_product" {
+  type = string
+}

@@ -34,8 +34,13 @@ module "virtual_machine" {
   vm_size             = var.vm_size
   user_data_file      = var.vm_user_data_file
   subnet_id           = module.network.default_subnet_id
-  vm_image_publisher  = var.vm_image_publisher
-  vm_image_offer      = var.vm_image_offer
-  vm_image_sku        = var.vm_image_sku
-  vm_image_version    = var.vm_image_version
+
+  vm_image_publisher = var.vm_image_publisher
+  vm_image_offer     = var.vm_image_offer
+  vm_image_sku       = var.vm_image_sku
+  vm_image_version   = var.vm_image_version
+
+  vm_plan_name      = var.vm_plan_name
+  vm_plan_publisher = var.vm_plan_publisher
+  vm_plan_product   = var.vm_plan_product
 }
