@@ -24,14 +24,14 @@ allowed_public_ips = [""]
 ```
 
 > [!NOTE]
-> You must accept the terms for marketplace images. Check in the sections bellow for reference.
+> For some images, you must accept the terms for marketplace images. Check in the sections bellow for reference.
 
 Adjust the images available by commenting/uncommenting the code blocks referring to the different image types. Options explained here are:
 
 - CIS Ubuntu
 - Canonical Ubuntu Pro
 
-Make sure the terms have been accepted before proceeding.
+Make sure the terms have been accepted for required images before proceeding.
 
 Now, create the infrastructure:
 
@@ -75,12 +75,6 @@ az vm image list -p center-for-internet-security-inc -f cis-ubuntu -s cis-ubuntu
 Information about Canonical Ubuntu Pro images can be found at [About Public Cloud Ubuntu Pro images][4].
 
 And the Azure Marketplace options can be found at [Ubuntu 24.04 LTS - all plans including Ubuntu Pro][5].
-
-### Accept the Terms
-
-```sh
-az vm image terms accept --urn "center-for-internet-security-inc:cis-ubuntu:cis-ubuntulinux2404-l1-gen2:latest"
-```
 
 ### Check for Updates
 
