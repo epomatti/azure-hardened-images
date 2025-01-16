@@ -1,0 +1,14 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [
+        "azureuser",
+        "canubu",
+        "osdisk",
+        "vnet"
+    ],
+    "ignoreWords": [],
+    "import": []
+}
