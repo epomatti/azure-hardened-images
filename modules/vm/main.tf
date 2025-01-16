@@ -54,10 +54,15 @@ resource "azurerm_linux_virtual_machine" "main" {
     version   = var.vm_image_version
   }
 
-  plan {
-    name      = "cis-ubuntulinux2404-l1-gen2"
-    publisher = "center-for-internet-security-inc"
-    product   = "cis-ubuntu"
+  dynamic "plan" {
+    for_each = var.vm_plan
+    iterator = plan
+
+    content {
+      name      = plan.value["name"]
+      publisher = plan.value["publisher"]
+      product   = plan.value["product"]
+    }
   }
 
   lifecycle {

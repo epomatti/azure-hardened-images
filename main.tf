@@ -40,7 +40,8 @@ module "virtual_machine" {
   vm_image_sku       = var.vm_image_sku
   vm_image_version   = var.vm_image_version
 
-  vm_plan_name      = var.vm_plan_name
-  vm_plan_publisher = var.vm_plan_publisher
-  vm_plan_product   = var.vm_plan_product
+  # vm_plan_name      = var.vm_plan_name
+  # vm_plan_publisher = var.vm_plan_publisher
+  # vm_plan_product   = var.vm_plan_product
+  vm_plan = var.vm_plan
 }
