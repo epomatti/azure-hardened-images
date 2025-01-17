@@ -23,6 +23,17 @@ vm_plan = [
   }
 ]
 
+### Canonical Ubuntu Server ###
+# vm_user_data_file = "canonical-ubuntu.sh"
+# vm_name_affix     = "canonical-ubuntu"
+
+# vm_image_publisher = "canonical"
+# vm_image_offer     = "ubuntu-24_04-lts"
+# vm_image_sku       = "server"
+# vm_image_version   = "latest"
+
+# vm_plan = []
+
 ### Canonical Ubuntu Pro ###
 # vm_user_data_file = "canonical-ubuntu-pro.sh"
 # vm_name_affix     = "canonical-ubuntu-pro"

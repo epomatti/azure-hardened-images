@@ -7,11 +7,17 @@
         "azureuser",
         "brazilsouth",
         "canubu",
+        "lynis",
+        "openscap",
+        "oscap",
         "osdisk",
+        "ssgproject",
         "STIG",
         "ubuntulinux",
         "vnet",
-        "vtpm"
+        "vtpm",
+        "xccdf",
+        "xsltproc"
     ],
     "ignoreWords": [],
     "import": []

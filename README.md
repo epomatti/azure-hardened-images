@@ -98,7 +98,75 @@ As of this writing and marketplace documentation, this is the pricing estimate. 
 Ubuntu Pro licenses are charged according to Canonical [pricing table][7], but offer a variety of additional features, one of which is hardening.
 
 
+## Compliance Check
 
+Here are some of the tools that can be used to verify the compliance of images with baselines:
+
+### OpenSCAP
+
+https://www.open-scap.org/
+
+```sh
+sudo apt install -y openscap-scanner
+```
+
+Get the content:
+
+```sh
+git clone https://github.com/ComplianceAsCode/content.git
+cd content/build
+sudo apt install -y cmake libxml2-utils xsltproc
+cmake ..
+make -j$(nproc)
+```
+
+To run the scan:
+
+```sh
+cd ../..
+oscap xccdf eval --profile xccdf_org.ssgproject.content_profile_cis --results scan-results.xml --report scan-report.html ./content/build/ssg-ubuntu2404-ds.xml
+```
+
+xdg-open scan-report.html
+
+
+### Lynis
+
+https://cisofy.com/lynis/
+
+```sh
+sudo apt install -y lynis
+sudo lynis audit system
+```
+
+Running the scan on a Ubuntu Server box:
+
+```
+  Hardening index : 64 [############        ]
+  Tests performed : 254
+  Plugins enabled : 1
+```
+
+The results for a CIS image are the following:
+
+```
+  Hardening index : 72 [##############      ]
+  Tests performed : 254
+  Plugins enabled : 1
+```
+
+### CIS-CAT Lite
+
+https://learn.cisecurity.org/cis-cat-lite
+
+
+### DevSec Hardening
+
+https://github.com/dev-sec
+
+### Compliance-as-code
+
+https://github.com/ComplianceAsCode/content
 
 [1]: https://www.cisecurity.org/cis-hardened-images/microsoft
 [2]: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/center-for-internet-security-inc.cis-ubuntu?tab=Overview
