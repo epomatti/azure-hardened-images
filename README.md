@@ -33,15 +33,12 @@ Adjust the images available by commenting/uncommenting the code blocks referring
 
 Make sure the terms have been accepted for required images before proceeding.
 
-Now, create the infrastructure:
+Create the infrastructure:
 
 ```sh
 terraform init
 terraform apply -auto-approve
 ```
-
-## Image types
-
 
 ## CIS
 
@@ -82,9 +79,25 @@ And the Azure Marketplace options can be found at [Ubuntu 24.04 LTS - all plans 
 az vm image list -p center-for-internet-security-inc -f cis-ubuntu -s cis-ubuntulinux2404-l1-gen2 --all
 ```
 
-## Costs
+## Pricing
 
-https://www.youtube.com/watch?v=BuOa8AAPWwM
+### CIS
+
+As of this writing and marketplace documentation, this is the pricing estimate. This is additional costs on top of standard VM and disk resources. This [video][6] does a walkthrough.
+
+> [!NOTE]
+> When creating a VM using the portal, the estimate monthly costs provided by Azure is different. For example, it says CIS image license would cost $89.35 monthly.
+
+
+| Image      | Architectures | $/Hour  | Monthly | 1-Year |
+|------------|---------------|--------|---------|--------|
+| CIS        | x86           | $0.0225 | $16.42  | $197.1 | 
+
+### Ubuntu Pro
+
+Ubuntu Pro licenses are charged according to Canonical [pricing table][7], but offer a variety of additional features, one of which is hardening.
+
+
 
 
 [1]: https://www.cisecurity.org/cis-hardened-images/microsoft
@@ -92,3 +105,5 @@ https://www.youtube.com/watch?v=BuOa8AAPWwM
 [3]: https://www.cisecurity.org/insights/blog/new-options-from-cis-for-stig-compliance
 [4]: https://canonical-ubuntu-pro-client.readthedocs-hosted.com/en/v29/explanations/what_are_ubuntu_pro_cloud_instances.html
 [5]: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/canonical.ubuntu-24_04-lts?tab=Overview
+[6]: https://www.youtube.com/watch?v=BuOa8AAPWwM
+[7]: https://ubuntu.com/pricing/pro
