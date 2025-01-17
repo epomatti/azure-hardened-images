@@ -127,9 +127,6 @@ cd ../..
 oscap xccdf eval --profile xccdf_org.ssgproject.content_profile_cis --results scan-results.xml --report scan-report.html ./content/build/ssg-ubuntu2404-ds.xml
 ```
 
-xdg-open scan-report.html
-
-
 ### Lynis
 
 https://cisofy.com/lynis/
