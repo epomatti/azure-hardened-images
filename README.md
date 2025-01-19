@@ -67,11 +67,13 @@ az vm image terms accept --urn "center-for-internet-security-inc:cis-ubuntu:cis-
 az vm image list -p center-for-internet-security-inc -f cis-ubuntu -s cis-ubuntulinux2404-l1-gen2 --all
 ```
 
-## Canonical
+## Canonical Ubuntu Pro
 
 Information about Canonical Ubuntu Pro images can be found at [About Public Cloud Ubuntu Pro images][4].
 
 And the Azure Marketplace options can be found at [Ubuntu 24.04 LTS - all plans including Ubuntu Pro][5].
+
+This video from [Canonical](https://youtu.be/y5WK3y4BnzM) gives a good explanation about Ubuntu Pro on Azure.
 
 ### Check for Updates
 
