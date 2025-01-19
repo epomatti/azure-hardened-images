@@ -46,22 +46,14 @@ variable "vm_image_version" {
   type = string
 }
 
-# variable "vm_plan_name" {
-#   type = string
-# }
-
-# variable "vm_plan_publisher" {
-#   type = string
-# }
-
-# variable "vm_plan_product" {
-#   type = string
-# }
-
 variable "vm_plan" {
   type = list(object({
     name      = string
     publisher = string
     product   = string
   }))
+}
+
+variable "user_assigned_identity_id" {
+  type = string
 }
