@@ -153,6 +153,9 @@ sudo usg audit <PROFILE>
 
 Apply the fixes:
 
+> [!NOTE]
+> A system reboot is required to complete the fix process. Run `usg audit` after teh reboot.
+
 ```sh
 sudo usg fix <PROFILE>
 ```
