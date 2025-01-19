@@ -40,7 +40,7 @@ terraform init
 terraform apply -auto-approve
 ```
 
-## CIS
+## Center for Internet Security (CIS)
 
 ### Introduction
 
@@ -74,6 +74,23 @@ Information about Canonical Ubuntu Pro images can be found at [About Public Clou
 And the Azure Marketplace options can be found at [Ubuntu 24.04 LTS - all plans including Ubuntu Pro][5].
 
 This video from [Canonical](https://youtu.be/y5WK3y4BnzM) gives a good explanation about Ubuntu Pro on Azure.
+
+### Service management
+
+To check the service status of Ubuntu Pro:
+
+> [!TIP]
+> Read the full documentation in the [Ubuntu Pro Client][8] hot site.
+
+```sh
+sudo ua status --wait
+```
+
+To check Livepatch:
+
+```sh
+canonical-livepatch status --verbose
+```
 
 ### Check for Updates
 
@@ -174,3 +191,4 @@ https://github.com/ComplianceAsCode/content
 [5]: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/canonical.ubuntu-24_04-lts?tab=Overview
 [6]: https://www.youtube.com/watch?v=BuOa8AAPWwM
 [7]: https://ubuntu.com/pricing/pro
+[8]: https://canonical-ubuntu-pro-client.readthedocs-hosted.com/en/latest/index.html
