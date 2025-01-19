@@ -112,7 +112,8 @@ A storage account has been provisioned and the Azure CLI should be available.
 Login to Azure CLI with the VM identity:
 
 ```sh
-az login --identity
+# Make sure to use "sudo"
+sudo az login --identity
 ```
 
 If using Ubuntu Pro, make sure that the client is up to date:
@@ -154,6 +155,17 @@ Apply the fixes:
 
 ```sh
 sudo usg fix <PROFILE>
+```
+
+To upload the reports to the blob storage:
+
+```sh
+sudo az storage blob upload \
+    --account-name <storage-account> \
+    --container-name blobs \
+    --name myFile.txt \
+    --file myFile.txt \
+    --auth-mode login
 ```
 
 ## Pricing

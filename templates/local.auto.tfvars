@@ -7,21 +7,21 @@ vm_public_key_path = ".keys/tmp_rsa.pub"
 vm_size            = "Standard_B2ls_v2"
 
 ### CIS Ubuntu Server LTS ###
-vm_user_data_file = "ubuntu.sh"
-vm_name_affix     = "cis-ubuntu2404"
+# vm_user_data_file = "ubuntu.sh"
+# vm_name_affix     = "cis-ubuntu2404"
 
-vm_image_publisher = "center-for-internet-security-inc"
-vm_image_offer     = "cis-ubuntu"
-vm_image_sku       = "cis-ubuntulinux2404-l1-gen2"
-vm_image_version   = "latest"
+# vm_image_publisher = "center-for-internet-security-inc"
+# vm_image_offer     = "cis-ubuntu"
+# vm_image_sku       = "cis-ubuntulinux2404-l1-gen2"
+# vm_image_version   = "latest"
 
-vm_plan = [
-  {
-    name      = "cis-ubuntulinux2404-l1-gen2"
-    publisher = "center-for-internet-security-inc"
-    product   = "cis-ubuntu"
-  }
-]
+# vm_plan = [
+#   {
+#     name      = "cis-ubuntulinux2404-l1-gen2"
+#     publisher = "center-for-internet-security-inc"
+#     product   = "cis-ubuntu"
+#   }
+# ]
 
 ### Canonical Ubuntu Server ###
 # vm_user_data_file = "ubuntu.sh"
@@ -34,6 +34,7 @@ vm_plan = [
 
 # vm_plan = []
 
+
 ### Canonical Ubuntu Pro ###
 # vm_user_data_file = "ubuntu.sh"
 # vm_name_affix     = "canonical-ubuntu-pro"
@@ -44,3 +45,20 @@ vm_plan = [
 # vm_image_version   = "latest"
 
 # vm_plan = []
+
+### Canonical Ubuntu Pro ###
+vm_user_data_file = "ubuntu.sh"
+vm_name_affix     = "canonical-ubuntu-pro"
+
+vm_image_publisher = "canonical"
+vm_image_offer     = "0001-com-ubuntu-pro-jammy"
+vm_image_sku       = "pro-22_04-lts-gen2"
+vm_image_version   = "latest"
+
+vm_plan = [
+  {
+    name      = "pro-22_04-lts-gen2"
+    publisher = "canonical"
+    product   = "0001-com-ubuntu-pro-jammy"
+  }
+]
