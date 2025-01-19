@@ -217,7 +217,7 @@ As of this writing and marketplace documentation, this is the pricing estimate. 
 
 ### Ubuntu Pro
 
-Ubuntu Pro licenses are charged according to Canonical [pricing table][7], but offer a variety of additional features, one of which is hardening.
+Ubuntu Pro has a variable cost based on the VM size.
 
 
 ## Compliance Check
