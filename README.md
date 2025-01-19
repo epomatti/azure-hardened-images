@@ -171,6 +171,36 @@ sudo az storage blob upload \
     --auth-mode login
 ```
 
+Results running Lynis on a CIS Level 1:
+
+```
+  Lynis security scan details:
+
+  Hardening index : 68 [#############       ]
+  Tests performed : 261
+  Plugins enabled : 1
+```
+
+Results running Lynis on a CIS Level 2:
+
+```
+Lynis security scan details:
+
+  Hardening index : 70 [##############      ]
+  Tests performed : 264
+  Plugins enabled : 1
+```
+
+After upgrading all packages on a CIS Level 2:
+
+```
+Lynis security scan details:
+
+  Hardening index : 75 [###############     ]
+  Tests performed : 264
+  Plugins enabled : 1
+```
+
 ## Pricing
 
 ### CIS
