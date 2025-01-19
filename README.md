@@ -75,6 +75,13 @@ And the Azure Marketplace options can be found at [Ubuntu 24.04 LTS - all plans 
 
 This video from [Canonical](https://youtu.be/y5WK3y4BnzM) gives a good explanation about Ubuntu Pro on Azure.
 
+### Accept the Terms
+
+```sh
+# Ubuntu 22
+az vm image terms accept --urn "canonical:0001-com-ubuntu-pro-jammy:pro-22_04-lts-gen2:latest"
+```
+
 ### Service management
 
 To check the service status of Ubuntu Pro:
@@ -96,6 +103,57 @@ canonical-livepatch status --verbose
 
 ```sh
 az vm image list -p center-for-internet-security-inc -f cis-ubuntu -s cis-ubuntulinux2404-l1-gen2 --all
+```
+
+## Extracting reports
+
+A storage account has been provisioned and the Azure CLI should be available.
+
+Login to Azure CLI with the VM identity:
+
+```sh
+az login --identity
+```
+
+If using Ubuntu Pro, make sure that the client is up to date:
+
+```sh
+sudo apt update && sudo apt install ubuntu-advantage-tools
+```
+
+As we can see, this image is entitled for all services, and has an `essential` support level:
+
+```sh
+pro status --all
+```
+
+<img src=".assets/ubuntu-pro-status.png" width=600/>
+
+Enable and install USG:
+
+> [!NOTE]
+> As of the time of this writing, USG is not available for Ubuntu Server 24.04.
+
+```sh
+sudo pro enable usg
+sudo apt install usg
+```
+
+The [profile options][9] for server are:
+
+- `cis_level1_server`
+- `cis_level2_server`
+
+Audit to verify current status:
+
+```sh
+sudo usg audit <PROFILE>
+```
+
+Apply the fixes:
+
+```sh
+sudo usg fix <PROFILE>
 ```
 
 ## Pricing
@@ -192,3 +250,4 @@ https://github.com/ComplianceAsCode/content
 [6]: https://www.youtube.com/watch?v=BuOa8AAPWwM
 [7]: https://ubuntu.com/pricing/pro
 [8]: https://canonical-ubuntu-pro-client.readthedocs-hosted.com/en/latest/index.html
+[9]: https://ubuntu.com/security/certifications/docs/usg/cis/compliance
